@@ -1,8 +1,8 @@
-import { db } from "../_lib/prisma";
-import CategoryItem from "./category-item";
+import { db } from '../_lib/prisma'
+import CategoryItem from './category-item'
 
 const CategoryList = async () => {
-  const categories = await db.category.findMany({});
+  const categories = await db.category.findMany({})
 
   // Pegar as categorias do banco de dados
   // Renderizar um item pra cada categoria
@@ -12,7 +12,7 @@ const CategoryList = async () => {
         <CategoryItem key={category.id} category={category} />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default CategoryList;
+export default CategoryList
